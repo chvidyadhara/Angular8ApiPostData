@@ -1,0 +1,53 @@
+
+<div class="container mt-3">
+    <h2>Add Post Example</h2>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-primary" id="myBtn">Post The Data</button>
+  
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Enter The Information</h4>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
+          
+          <!-- Modal body -->
+          
+          <div class="modal-body">
+              <form>
+             Title: <input type="text" class="form-control" #tile><br>
+              Image Url:<input type="text"  #id class="form-control"><br>
+              
+              About The Image:<textarea class="form-control" #infor ></textarea><br>
+              <button class="btn btn-primary" type="submit" (click)="submit(tile.value,id.value,infor.value)">Save</button>
+            </form>
+          </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="sumit" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-md-4"  *ngFor="let rem of getd">
+    <div class="card" >
+      <img class="card-img-top" src="{{rem.id}}" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">{{rem.tile}}</h4>
+        <p class="card-title">{{rem.infor}}</p>
+        <a href="#" class="btn btn-primary stretched-link">See Profile</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
